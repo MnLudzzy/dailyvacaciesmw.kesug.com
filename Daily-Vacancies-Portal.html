@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Vacancies - Education Updates & Job Postings</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#10b981'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-['Pacifico'] text-primary">Daily Vacancies</a>
+            
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="font-medium text-gray-900 hover:text-primary transition">Home</a>
+                <a href="#jobs" class="font-medium text-gray-700 hover:text-primary transition">Jobs</a>
+                <a href="#resources" class="font-medium text-gray-700 hover:text-primary transition">Resources</a>
+                <a href="#contact" class="font-medium text-gray-700 hover:text-primary transition">Contact Us</a>
+            </nav>
+            
+            <a href="#admin" class="hidden md:flex items-center px-4 py-2 bg-primary text-white font-medium !rounded-button hover:bg-blue-600 transition whitespace-nowrap">
+                <div class="w-5 h-5 flex items-center justify-center mr-2">
+                    <i class="ri-user-line"></i>
+                </div>
+                Admin Login
+            </a>
+            
+            <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+                <i class="ri-menu-line text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative">
+        <div style="background-image: url('https://static.readdy.ai/image/72e11150ecb5d79882e1ba141985814d/080396009d84d99182878a15c1797f84.jpeg');" class="bg-cover bg-center h-[500px]">
+            <div class="container mx-auto px-4 h-full flex items-center">
+                <div class="w-full md:w-1/2 bg-white bg-opacity-90 p-8 rounded-lg shadow-lg">
+                    <h1 class="text-4xl font-bold text-gray-900 mb-4">Empowering Education & Career Growth</h1>
+                    <p class="text-lg text-gray-700 mb-8">Access educational resources, download secondary school books, MANEB past papers, and discover exciting job opportunities all in one place.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#jobs" class="px-6 py-3 bg-primary text-white font-medium !rounded-button hover:bg-blue-600 transition text-center whitespace-nowrap">
+                            Browse Jobs
+                        </a>
+                        <a href="#resources" class="px-6 py-3 bg-white text-primary font-medium border border-primary !rounded-button hover:bg-gray-50 transition text-center whitespace-nowrap">
+                            Download Resources
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Features -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Our Services</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Job Postings -->
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-briefcase-line text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Job Postings</h3>
+                    <p class="text-gray-600 mb-4">Discover the latest job opportunities across various sectors in Malawi. Updated daily with verified listings.</p>
+                    <a href="#jobs" class="text-primary font-medium flex items-center hover:underline">
+                        View Jobs
+                        <div class="w-5 h-5 flex items-center justify-center ml-1">
+                            <i class="ri-arrow-right-line"></i>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Educational Resources -->
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition">
+                    <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-book-open-line text-secondary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Educational Resources</h3>
+                    <p class="text-gray-600 mb-4">Access a comprehensive library of secondary school books and MANEB past papers to enhance your learning.</p>
+                    <a href="#resources" class="text-secondary font-medium flex items-center hover:underline">
+                        Explore Resources
+                        <div class="w-5 h-5 flex items-center justify-center ml-1">
+                            <i class="ri-arrow-right-line"></i>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Social Media Connections -->
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition">
+                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-global-line text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Social Media Connections</h3>
+                    <p class="text-gray-600 mb-4">Join our active community on WhatsApp, Facebook, and LinkedIn for updates, discussions, and networking.</p>
+                    <a href="#social" class="text-purple-600 font-medium flex items-center hover:underline">
+                        Connect Now
+                        <div class="w-5 h-5 flex items-center justify-center ml-1">
+                            <i class="ri-arrow-right-line"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jobs Section -->
+    <section id="jobs" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Latest Job Opportunities</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Job Card 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-lg font-semibold text-gray-900">Secondary School Teacher</h3>
+                        <span class="px-3 py-1 bg-blue-100 text-primary text-xs font-medium rounded-full">Education</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Lilongwe Private Secondary School is seeking qualified teachers for Mathematics and Sciences. Minimum qualification: Bachelor's Degree.</p>
+                    <div class="flex items-center text-gray-500 text-sm mb-4">
+                        <div class="w-4 h-4 flex items-center justify-center mr-1">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+                        <span>Lilongwe, Malawi</span>
+                        <div class="w-4 h-4 flex items-center justify-center ml-4 mr-1">
+                            <i class="ri-time-line"></i>
+                        </div>
+                        <span>Posted: June 12, 2025</span>
+                    </div>
+                    <a href="#" class="block w-full px-4 py-2 bg-primary text-white text-center font-medium !rounded-button hover:bg-blue-600 transition whitespace-nowrap">Apply Now</a>
+                </div>
+                
+                <!-- Job Card 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-lg font-semibold text-gray-900">Finance Officer</h3>
+                        <span class="px-3 py-1 bg-green-100 text-secondary text-xs font-medium rounded-full">Banking</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">First Capital Bank is looking for a Finance Officer with at least 3 years of experience in banking. ACCA qualification preferred.</p>
+                    <div class="flex items-center text-gray-500 text-sm mb-4">
+                        <div class="w-4 h-4 flex items-center justify-center mr-1">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+                        <span>Blantyre, Malawi</span>
+                        <div class="w-4 h-4 flex items-center justify-center ml-4 mr-1">
+                            <i class="ri-time-line"></i>
+                        </div>
+                        <span>Posted: June 10, 2025</span>
+                    </div>
+                    <a href="#" class="block w-full px-4 py-2 bg-primary text-white text-center font-medium !rounded-button hover:bg-blue-600 transition whitespace-nowrap">Apply Now</a>
+                </div>
+                
+                <!-- Job Card 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-lg font-semibold text-gray-900">IT Support Specialist</h3>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-600 text-xs font-medium rounded-full">Technology</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">TNM is seeking an IT Support Specialist to provide technical assistance to staff. CompTIA A+ certification required.</p>
+                    <div class="flex items-center text-gray-500 text-sm mb-4">
+                        <div class="w-4 h-4 flex items-center justify-center mr-1">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+                        <span>Mzuzu, Malawi</span>
+                        <div class="w-4 h-4 flex items-center justify-center ml-4 mr-1">
+                            <i class="ri-time-line"></i>
+                        </div>
+                        <span>Posted: June 8, 2025</span>
+                    </div>
+                    <a href="#" class="block w-full px-4 py-2 bg-primary text-white text-center font-medium !rounded-button hover:bg-blue-600 transition whitespace-nowrap">Apply Now</a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="#" class="inline-flex items-center px-6 py-3 bg-white text-primary font-medium border border-primary !rounded-button hover:bg-gray-50 transition whitespace-nowrap">
+                    View All Jobs
+                    <div class="w-5 h-5 flex items-center justify-center ml-2">
+                        <i class="ri-arrow-right-line"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Educational Resources</h2>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Secondary School Books -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="ri-book-line text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Secondary School Books</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded shadow-sm">
+                            <h4 class="font-medium text-gray-900 mb-2">Mathematics</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="#" class="px-3 py-1 bg-blue-50 text-primary text-sm !rounded-button hover:bg-blue-100 transition whitespace-nowrap">Form 1</a>
+                                <a href="#" class="px-3 py-1 bg-blue-50 text-primary text-sm !rounded-button hover:bg-blue-100 transition whitespace-nowrap">Form 2</a>
+                                <a href="#" class="px-3 py-1 bg-blue-50 text-primary text-sm !rounded-button hover:bg-blue-100 transition whitespace-nowrap">Form 3</a>
+                                <a href="#" class="px-3 py-1 bg-blue-50 text-primary text-sm !rounded-button hover:bg-blue-100 transition whitespace-nowrap">Form 4</a>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded shadow-sm">
+                            <h4 class="font-medium text-gray-900 mb-2">Biology</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="#" class="px-3 py-1 bg-blue-50 text-primary text-sm !rounded-button hover:bg-blue-100 transition whitespace-nowrap">Form 1</a>
+                                <a href="#" class="px-3 py-1 bg-blue-50 text-primary text-sm !rounded-button hover:bg-blue-100 transition whitespace-nowrap">Form 2</a>
+                                <a href="#" class="px-3 py-1 bg-blue-50 text-primary text-sm !rounded-button hover:bg-blue-100 transition whitespace-nowrap">Form 3</a>
+                                <a href="#" class="px-3 py-1 bg-blue-50 text-primary text-sm !rounded-button hover:bg-blue-100 transition whitespace-nowrap">Form 4</a>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded shadow-sm">
+                            <h4 class="font-medium text-gray-900 mb-2">English Language</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="#" class="px-3 py-1 bg-blue-50 text-primary text-sm !rounded-button hover:bg-blue-100 transition whitespace-nowrap">Form 1</a>
+                                <a href="#" class="px-3 py-1 bg-blue-50 text-primary text-sm !rounded-button hover:bg-blue-100 transition whitespace-nowrap">Form 2</a>
+                                <a href="#" class="px-3 py-1 bg-blue-50 text-primary text-sm !rounded-button hover:bg-blue-100 transition whitespace-nowrap">Form 3</a>
+                                <a href="#" class="px-3 py-1 bg-blue-50 text-primary text-sm !rounded-button hover:bg-blue-100 transition whitespace-nowrap">Form 4</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="mt-6 inline-flex items-center text-primary font-medium hover:underline">
+                        View All Subjects
+                        <div class="w-5 h-5 flex items-center justify-center ml-1">
+                            <i class="ri-arrow-right-line"></i>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- MANEB Past Papers -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="ri-file-list-3-line text-secondary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">MANEB Past Papers</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded shadow-sm">
+                            <h4 class="font-medium text-gray-900 mb-2">JCE Past Papers</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="#" class="px-3 py-1 bg-green-50 text-secondary text-sm !rounded-button hover:bg-green-100 transition whitespace-nowrap">2024</a>
+                                <a href="#" class="px-3 py-1 bg-green-50 text-secondary text-sm !rounded-button hover:bg-green-100 transition whitespace-nowrap">2023</a>
+                                <a href="#" class="px-3 py-1 bg-green-50 text-secondary text-sm !rounded-button hover:bg-green-100 transition whitespace-nowrap">2022</a>
+                                <a href="#" class="px-3 py-1 bg-green-50 text-secondary text-sm !rounded-button hover:bg-green-100 transition whitespace-nowrap">2021</a>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded shadow-sm">
+                            <h4 class="font-medium text-gray-900 mb-2">MSCE Past Papers</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="#" class="px-3 py-1 bg-green-50 text-secondary text-sm !rounded-button hover:bg-green-100 transition whitespace-nowrap">2024</a>
+                                <a href="#" class="px-3 py-1 bg-green-50 text-secondary text-sm !rounded-button hover:bg-green-100 transition whitespace-nowrap">2023</a>
+                                <a href="#" class="px-3 py-1 bg-green-50 text-secondary text-sm !rounded-button hover:bg-green-100 transition whitespace-nowrap">2022</a>
+                                <a href="#" class="px-3 py-1 bg-green-50 text-secondary text-sm !rounded-button hover:bg-green-100 transition whitespace-nowrap">2021</a>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded shadow-sm">
+                            <h4 class="font-medium text-gray-900 mb-2">PSLCE Past Papers</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="#" class="px-3 py-1 bg-green-50 text-secondary text-sm !rounded-button hover:bg-green-100 transition whitespace-nowrap">2024</a>
+                                <a href="#" class="px-3 py-1 bg-green-50 text-secondary text-sm !rounded-button hover:bg-green-100 transition whitespace-nowrap">2023</a>
+                                <a href="#" class="px-3 py-1 bg-green-50 text-secondary text-sm !rounded-button hover:bg-green-100 transition whitespace-nowrap">2022</a>
+                                <a href="#" class="px-3 py-1 bg-green-50 text-secondary text-sm !rounded-button hover:bg-green-100 transition whitespace-nowrap">2021</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="mt-6 inline-flex items-center text-secondary font-medium hover:underline">
+                        View All Papers
+                        <div class="w-5 h-5 flex items-center justify-center ml-1">
+                            <i class="ri-arrow-right-line"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="social" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Connect With Us</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- WhatsApp -->
+                <a href="https://whatsapp.com/channel/0029Vau1AdBAYlULN2WqYK24" target="_blank" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition flex flex-col items-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-whatsapp-line text-green-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">WhatsApp Channel</h3>
+                    <p class="text-gray-600 text-center mb-4">Join our WhatsApp channel for instant updates on new job postings and resources.</p>
+                    <span class="px-4 py-2 bg-green-600 text-white font-medium !rounded-button hover:bg-green-700 transition whitespace-nowrap">Join Channel</span>
+                </a>
+                
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/profile.php?id=61567494475651" target="_blank" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition flex flex-col items-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-facebook-fill text-blue-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Facebook Group</h3>
+                    <p class="text-gray-600 text-center mb-4">Connect with fellow job seekers and educators in our active Facebook community.</p>
+                    <span class="px-4 py-2 bg-blue-600 text-white font-medium !rounded-button hover:bg-blue-700 transition whitespace-nowrap">Join Group</span>
+                </a>
+                
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/groups/10046899" target="_blank" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition flex flex-col items-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-linkedin-fill text-blue-800 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">LinkedIn Group</h3>
+                    <p class="text-gray-600 text-center mb-4">Network with professionals and stay updated on career opportunities in Malawi.</p>
+                    <span class="px-4 py-2 bg-blue-800 text-white font-medium !rounded-button hover:bg-blue-900 transition whitespace-nowrap">Join Group</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Contact Us</h2>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <div>
+                    <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-6">Get In Touch</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="ri-map-pin-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900">Address</h4>
+                                    <p class="text-gray-600">Lilongwe Old Town, Malawi</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="ri-mail-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900">Email</h4>
+                                    <p class="text-gray-600">mnludzzy@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="ri-phone-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900">Phone</h4>
+                                    <p class="text-gray-600">+265 880 122 347</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-6">Sponsor Details</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-white p-4 rounded shadow-sm">
+                                <div class="flex items-center mb-2">
+                                    <div class="w-8 h-8 flex items-center justify-center mr-2">
+                                        <i class="ri-bank-line text-blue-800"></i>
+                                    </div>
+                                    <h4 class="font-medium text-gray-900">First Capital Bank</h4>
+                                </div>
+                                <p class="text-gray-600">Account Number: 0026503031817</p>
+                                <p class="text-gray-600">Account Name: Louis Belenado</p>
+                            </div>
+                            
+                            <div class="bg-white p-4 rounded shadow-sm">
+                                <div class="flex items-center mb-2">
+                                    <div class="w-8 h-8 flex items-center justify-center mr-2">
+                                        <i class="ri-smartphone-line text-red-600"></i>
+                                    </div>
+                                    <h4 class="font-medium text-gray-900">Airtel Money</h4>
+                                </div>
+                                <p class="text-gray-600">Number: +265 998 089 429</p>
+                                <p class="text-gray-600">Name: Belenado Chikalenda</p>
+                            </div>
+                            
+                            <div class="bg-white p-4 rounded shadow-sm">
+                                <div class="flex items-center mb-2">
+                                    <div class="w-8 h-8 flex items-center justify-center mr-2">
+                                        <i class="ri-smartphone-line text-blue-600"></i>
+                                    </div>
+                                    <h4 class="font-medium text-gray-900">TNM Mpamba</h4>
+                                </div>
+                                <p class="text-gray-600">Number: +265 880 122 347</p>
+                                <p class="text-gray-600">Name: Louis Belenado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-6">Send Us a Message</h3>
+                    
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 mb-2">Full Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Enter your name">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Enter your email">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Enter subject">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Enter your message"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full px-6 py-3 bg-primary text-white font-medium !rounded-button hover:bg-blue-600 transition whitespace-nowrap">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Login Modal -->
+    <div id="admin" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-xl font-semibold text-gray-900">Admin Login</h3>
+                <button id="closeAdminModal" class="text-gray-500 hover:text-gray-700">
+                    <div class="w-6 h-6 flex items-center justify-center">
+                        <i class="ri-close-line text-xl"></i>
+                    </div>
+                </button>
+            </div>
+            
+            <form id="adminLoginForm">
+                <div class="mb-4">
+                    <label for="adminEmail" class="block text-gray-700 mb-2">Email</label>
+                    <input type="email" id="adminEmail" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Enter your email">
+                </div>
+                
+                <div class="mb-6">
+                    <label for="adminPassword" class="block text-gray-700 mb-2">Password</label>
+                    <input type="password" id="adminPassword" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Enter your password">
+                </div>
+                
+                <button type="submit" class="w-full px-6 py-3 bg-primary text-white font-medium !rounded-button hover:bg-blue-600 transition whitespace-nowrap">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 block">Daily Vacancies</a>
+                    <p class="text-gray-400">Your one-stop platform for educational resources and job opportunities in Malawi.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#jobs" class="text-gray-400 hover:text-white transition">Jobs</a></li>
+                        <li><a href="#resources" class="text-gray-400 hover:text-white transition">Resources</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Secondary School Books</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">MANEB Past Papers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Career Guides</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Study Tips</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="https://whatsapp.com/channel/0029Vau1AdBAYlULN2WqYK24" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition">
+                            <i class="ri-whatsapp-line"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61567494475651" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/groups/10046899" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-800 transition">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">Email: mnludzzy@gmail.com</p>
+                    <p class="text-gray-400">Phone: +265 880 122 347</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">&copy; 2025 Daily Vacancies. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 text-sm hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 text-sm hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script id="modalScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const adminLoginButton = document.querySelector('a[href="#admin"]');
+            const adminModal = document.getElementById('admin');
+            const closeAdminModal = document.getElementById('closeAdminModal');
+            
+            adminLoginButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                adminModal.classList.remove('hidden');
+            });
+            
+            closeAdminModal.addEventListener('click', function() {
+                adminModal.classList.add('hidden');
+            });
+            
+            window.addEventListener('click', function(e) {
+                if (e.target === adminModal) {
+                    adminModal.classList.add('hidden');
+                }
+            });
+            
+            const adminLoginForm = document.getElementById('adminLoginForm');
+            adminLoginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Here you would normally handle the login logic
+                alert('Admin login functionality would be implemented here.');
+            });
+        });
+    </script>
+    
+    <script id="formScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.querySelector('#contact form');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Here you would normally handle the form submission
+                alert('Your message has been sent. We will get back to you soon!');
+                contactForm.reset();
+            });
+        });
+    </script>
+    
+    <script id="mobileMenuScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.querySelector('.md\\:hidden');
+            const mobileMenu = document.createElement('div');
+            mobileMenu.className = 'fixed inset-0 bg-black bg-opacity-50 z-40 hidden';
+            mobileMenu.innerHTML = `
+                <div class="bg-white h-full w-64 p-4 transform transition-transform">
+                    <div class="flex justify-between items-center mb-6">
+                        <a href="#" class="text-xl font-['Pacifico'] text-primary">Daily Vacancies</a>
+                        <button class="text-gray-500 hover:text-gray-700">
+                            <div class="w-6 h-6 flex items-center justify-center">
+                                <i class="ri-close-line text-xl"></i>
+                            </div>
+                        </button>
+                    </div>
+                    <nav class="space-y-4">
+                        <a href="#" class="block font-medium text-gray-900 hover:text-primary transition">Home</a>
+                        <a href="#jobs" class="block font-medium text-gray-700 hover:text-primary transition">Jobs</a>
+                        <a href="#resources" class="block font-medium text-gray-700 hover:text-primary transition">Resources</a>
+                        <a href="#contact" class="block font-medium text-gray-700 hover:text-primary transition">Contact Us</a>
+                        <a href="#admin" class="block font-medium text-primary hover:text-blue-600 transition">Admin Login</a>
+                    </nav>
+                </div>
+            `;
+            document.body.appendChild(mobileMenu);
+            
+            const closeButton = mobileMenu.querySelector('button');
+            
+            menuButton.addEventListener('click', function() {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.querySelector('div').classList.add('translate-x-0');
+                mobileMenu.querySelector('div').classList.remove('-translate-x-full');
+            });
+            
+            closeButton.addEventListener('click', function() {
+                mobileMenu.querySelector('div').classList.remove('translate-x-0');
+                mobileMenu.querySelector('div').classList.add('-translate-x-full');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 300);
+            });
+            
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.querySelector('div').classList.remove('translate-x-0');
+                    mobileMenu.querySelector('div').classList.add('-translate-x-full');
+                    setTimeout(() => {
+                        mobileMenu.classList.add('hidden');
+                    }, 300);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
